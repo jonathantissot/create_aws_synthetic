@@ -1,0 +1,20 @@
+name: Testtodelete
+
+credentials: # You can use either access/secret/<token> or profile
+  access_key: ACCESS_KEY # You'll need to put ACCESS_KEY and SECRET_ACCESS KEY unless you are using a profile
+  secret_key: SECRET_ACCESS_KEY
+  session_token: placeholder # This is required if you are going through SSO
+  profile_name: my_aws_profile # You'll need this profile if you are not using ACCESS/SECRET_ACCESS keys
+configuration:
+  zip_path: somepath/from/root
+  handler: your_handler_function
+  artifact_location: s3://destination_bucket
+  expression: rate(1 hour) # Pick a rate
+  duration_in_seconds: 3600
+  timeout: 600
+  memory_in_mb: 960
+  runtime_version: syn-nodejs-puppeteer-3.1 # Pick your runtime version
+  environment_variables:
+    test_key: test_value # Add the environment variables that you need
+  actions:
+    - "s3:*" # Any additional actions that your role will require

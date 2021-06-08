@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  automation:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+    ports:
+      - "22:22"
+    volumes:
+      - .:/vmcaws
+    command: >
+      sh -c "python main.py values.yaml"
