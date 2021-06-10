@@ -6,8 +6,8 @@ credentials: # You can use either access/secret/<token> or profile
   session_token: placeholder # This is required if you are going through SSO
   profile_name: my_aws_profile # You'll need this profile if you are not using ACCESS/SECRET_ACCESS keys
 configuration:
-  zip_path: somepath/from/root
-  handler: your_handler_function
+  zip_path: nodejs/node_modules/pageLoadBlueprint.js
+  handler: pageLoadBlueprint.handler
   artifact_location: s3://destination_bucket
   expression: rate(1 hour) # Pick a rate
   duration_in_seconds: 3600

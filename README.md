@@ -14,7 +14,7 @@ This script will require you to pass a values.yaml. You can take the values_exam
 
 I went through the values_example.yaml adding comments to the line to explain what is required and what is not.
 
-It will require you to provide a path for a folder to be zipped and uploaded to create the Canary. This folder can either be an absolute path or a relative path.
+It will require you to provide a path for a folder to be zipped and uploaded to create the Canary. This folder can either be an absolute path or a relative path. This has been provided as an example script within the nodejs folder.
 
 After you are set up, you can run:
 ```bash
